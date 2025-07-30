@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // ✅ 讓牛肉麵旋轉（增加互動感）
         function animate() {
           requestAnimationFrame(animate);
-          beafnoodle.rotation.y += 0.0012; // 旋轉
+          beafnoodle.rotation.y += 0.1; // 旋轉
           renderer.render(scene, camera);
         }
         animate();
