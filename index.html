@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MindAR Three.js WebAR</title>
+
+    <!-- ✅ 允許 ES 模組加載（讓 importmap 能夠運作） -->
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+
+    <!-- ✅ 設定 import map，讓我們可以使用 ES6 的 import 語法 -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
+          "mindar-image-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"
+        }
+      }
+    </script>
+
+    <!-- ✅ 載入 main.js，並確保它是模組類型 -->
+    <script src="./main_3dmodel.js" type="module"></script>
+
+    <!-- ✅ 設定基礎 CSS，確保畫面滿版且不出現滾動條 -->
+    <style>
+      html,
+      body {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ❗ WebAR 內容會自動插入到 body 內，不需要額外的 HTML 元素 -->
+  </body>
+</html>
+
+<!-- ✅ 設定my-ar-container CSS -->
+<!--<style>
+    #my-ar-container
+    {
+      height:300px;
+      width:300px;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>-->
+
+<!-- ❗ 也可改成嵌入式的，置於body中-->
+<!--<h1>Image Target AR</h1>
+  <div id="my-ar-container"></div>
+  <p>圖像辨識</p>-->
