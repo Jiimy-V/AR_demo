@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mindarThree = new MindARThree({
       container: document.body,
       imageTargetSrc:
-        "https://cdn.glitch.global/40bcc53c-c06e-4f95-90e5-e453b7b44aaf/beafnoodle.mind?v=1747649901674",
+        "./beafnoodle.mind",
       filterMinCF: 0.0001,  // 追蹤平滑參數，數字越小越平滑
       filterBeta: 0.001,    // 追蹤平滑參數，數字越小越平滑
     });
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ✅ 加載 GLTF 牛肉麵模型
     const loader = new GLTFLoader();
     loader.load(
-      "https://cdn.glitch.global/40bcc53c-c06e-4f95-90e5-e453b7b44aaf/beafnoodle.glb?v=1747640354907",
+      "./assets/beafnoodle.glb",
       (gltf) => {
         const beafnoodle = gltf.scene;
         beafnoodle.scale.set(1, 1, 1); // ✅ 調整模型大小
