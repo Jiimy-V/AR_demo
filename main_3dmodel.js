@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mindarThree = new MindARThree({
       container: document.body,
       imageTargetSrc:
-        "./beafnoodle.mind",
+        "./assets/beafnoodle.mind",
       filterMinCF: 0.0001,  // 追蹤平滑參數，數字越小越平滑
       filterBeta: 0.001,    // 追蹤平滑參數，數字越小越平滑
     });
@@ -66,11 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("❌ MindAR 無法啟動", error);
       return;
     }
-
-    // ✅ 設定渲染迴圈
-    renderer.setAnimationLoop(() => {
-      renderer.render(scene, camera);
-    });
   };
   start();
 });
